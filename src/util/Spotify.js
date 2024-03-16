@@ -1,5 +1,5 @@
-const clientId = '88f55d3c0ba24ef4aea19cbbb821849d'; // Insert client ID here.
-const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+const clientId = '88f55d3c0ba24ef4aea19cbbb821849d'; 
+const redirectUri = 'https://spotify-playlist-creator-zeta.vercel.app/'; 
 let accessToken;
 
 const Spotify = {
@@ -14,7 +14,7 @@ const Spotify = {
       accessToken = accessTokenMatch[1];
       const expiresIn = Number(expiresInMatch[1]);
       window.setTimeout(() => accessToken = '', expiresIn * 1000);
-      window.history.pushState('Access Token', null, '/'); // This clears the parameters, allowing us to grab a new access token when it expires.
+      window.history.pushState('Access Token', null, '/');
       return accessToken;
     } else {
       const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
