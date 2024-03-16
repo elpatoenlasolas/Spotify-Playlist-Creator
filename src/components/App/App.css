@@ -1,0 +1,93 @@
+body,
+html,
+#root {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 1.88rem;
+  color: #000000;
+  margin-left: 50px;
+}
+
+h1 .highlight {
+  color: #ecca41;
+}
+
+h2 {
+  font-size: 1.55rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #A3BF8F;
+}
+
+.App {
+  height: 100%;
+  padding: 0 17% 10% 17%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: 0px auto 50px;
+  background-color: #F2CF66;
+}
+
+.divider span {
+  font-weight: 900;
+}
+
+button {
+    background-color: #F2F2F2;
+    border: 2px solid transparent;
+    border-radius: 54px;
+    color: black;
+    cursor: pointer;
+    font-size: .83rem;
+    font-weight: 500;
+    margin: 1.27rem;
+    padding: 0.77rem 0;
+    text-align: center;
+    transition: background-color .25s;
+    width: 10rem;
+}
+
+button:hover {
+  background-color: rgba(154, 255, 154, 0.872);
+  color: black;
+}
