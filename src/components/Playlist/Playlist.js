@@ -1,7 +1,5 @@
 import React, { useCallback } from "react";
-
 import "./Playlist.css";
-
 import TrackList from "../TrackList/TrackList";
 
 const Playlist = (props) => {
@@ -12,6 +10,10 @@ const Playlist = (props) => {
     [props.onNameChange]
   );
 
+  const saveAlert = () => {
+    alert('Your playlist has been saved!')
+  }
+
   return (
     <div className="Playlist">
       <input onChange={handleNameChange} defaultValue={"New Playlist"} />
@@ -20,7 +22,7 @@ const Playlist = (props) => {
         isRemoval={true}
         onRemove={props.onRemove}
       />
-      <button onClick={props.onSave}>
+      <button onClick={() => { props.onSave(); saveAlert(); }}>
         SAVE TO SPOTIFY
       </button>
     </div>
